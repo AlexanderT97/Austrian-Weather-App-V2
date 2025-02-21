@@ -17,8 +17,8 @@
 }
 
 @font-face {
-  font-family: Bowlby;
-  src: url(BowlbyOne-Regular.ttf);
+  font-family: 'Bowlby';
+  src: url('/fonts/BowlbyOne-Regular.ttf') format('truetype');
 }
 
 #app{
@@ -28,9 +28,8 @@
   background-position: center;
   display: flex;
   justify-content: center;
-  /*height: 100dvh;*/
   align-items: center;
-  font-family: Bowlby;
+  font-family: 'Bowlby', sans-serif;
   height: var(--real-vh);
   overflow: hidden;
 }

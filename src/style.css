@@ -1,0 +1,219 @@
+* {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+:root{
+  --red: #EF3340;
+  --white: #ffffff;
+  --black: #000000;
+  --real-vh: 100dvh;
+}
+
+::selection{
+  background-color: var(--red);
+  color: var(--white);
+}
+
+@font-face {
+  font-family: Bowlby;
+  src: url(BowlbyOne-Regular.ttf);
+}
+
+#app{
+  background-image: url(/background.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  /*height: 100dvh;*/
+  align-items: center;
+  font-family: Bowlby;
+  height: var(--real-vh);
+  overflow: hidden;
+}
+
+.weather{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 90dvh; 
+}
+
+
+
+.input{
+  background: linear-gradient(180deg, rgba(239, 51, 64, 0.8) 33.3%, rgba(255, 255, 255, 0.8) 33.3%, rgba(255, 255, 255, 0.8) 66.6%, rgba(239, 51, 64, 0.8) 66.6%);
+  color: var(--white);
+  background-size: cover;
+  -webkit-text-stroke: 2px var(--black);
+  letter-spacing: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+  padding: 1rem;
+  gap: 0.5rem;
+  padding-bottom: 3rem;
+  min-height: 21.5rem;
+  max-width: 95vw;
+}
+
+.bubble{
+  position: fixed;
+  top: 50%;
+  left: 0;
+  min-height: 12rem;
+  height: 30vh;
+  background: url(/Bubble.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding: 2rem 6rem;
+}
+
+#sepp{
+  height: 35vh;
+  min-height: 14.5rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transform: translateY(0);
+}
+
+h1{
+  font-size: 2.5rem;
+  margin: 0.1rem;
+  text-transform: uppercase;
+  display: block;
+  max-width: 100%; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.temp{
+  font-size: 2rem;
+  max-width: 100%;
+}
+
+.text{
+  font-size: 0.8rem;
+}
+
+.weather-icon{
+  width: auto;
+  height: 5rem;
+}
+
+.weather-icon.arni{
+  height: 10rem;
+  border-radius: 10px;
+}
+
+.city-input{
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  border: 3px solid var(--black);
+  border-radius: 30px;
+  width: 80%;
+  background-color: var(--white);
+}
+
+
+input[type=text]{
+  border: none;
+  padding: 0.5rem;
+  color: var(--black);
+  flex-grow: 2;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+input[type=text]:focus{
+  outline-style: none;
+}
+
+#search{
+  width: 1.2rem;
+  margin: 0.5rem;
+}
+
+@media screen and (max-width: 350px){
+  .bubble{
+    padding: 2rem 6rem;
+  }
+}
+
+@media screen and (max-width: 400px){
+  h1{
+    font-size: 2rem;
+  }
+
+  #sepp{
+    height: 30vh;
+  }
+}
+
+@media screen and (min-width: 450px){
+  .bubble{
+    padding: 2rem 8rem;
+  }
+}
+
+@media screen and (min-width: 500px){
+  .bubble{
+    padding: 2rem 11rem;
+  }
+}
+
+@media screen and (min-width: 650px){
+  .bubble{
+    padding: 2rem 16rem;
+  }
+}
+
+@media screen and (min-width: 800px){
+  #sepp{
+    height: 40vh;
+    right: 20%;
+  }
+
+  .bubble{
+    padding: 2rem 22rem;
+  }
+}
+
+@media screen and (min-width: 1000px){
+  .bubble{
+    padding: 2rem 30rem;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .bubble{
+    left: 5%;
+    padding: 2rem 32rem;
+  }
+}
+
+@media screen and (min-width: 1400px){
+  #sepp{
+    right: 30%;
+  }
+
+  .bubble{
+    padding: 2rem 38rem;
+  }
+}
+
+@media screen and (min-width: 1600px){
+  .bubble{
+    padding: 2rem 50rem;
+  }
+}
